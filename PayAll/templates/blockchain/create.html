@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Transaction</title>
+</head>
+<body>
+<form action="/block/Transact/" method="POST">
+	{% csrf_token %}
+	<input type="text" name="fromAdd">
+	<input type="text" name="toAdd">
+	<input type="number" name="amount">
+	<input type="submit" name="submit">
+</form>
+{% if success %}
+<p>success</p>
+{%endif%}
+</body>
+</html>
