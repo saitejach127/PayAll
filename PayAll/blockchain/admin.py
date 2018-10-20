@@ -9,4 +9,3 @@ from .models import *
 admin.site.register(Transaction)
 admin.site.register(pendingTransactions)
 admin.site.register(Block)
-admin.site.register(Chain)
