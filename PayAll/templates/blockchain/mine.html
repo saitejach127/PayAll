@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mine-PayAll</title>
+</head>
+<body>
+<form method="POST" action="/block/mineTransact/">
+	{% csrf_token %}
+	<input type="number" name="difficulty" value="3">
+	<input type="submit">
+</form>
+{% if hash %}
+<p>{{hash}}</p>
+{%endif%}
+</body>
+</html>

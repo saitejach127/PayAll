@@ -24,10 +24,10 @@ class Block(models.Model):
 	index = models.IntegerField()
 	_hash = models.CharField(max_length=100, blank=True)
 	previousHash = models.CharField(max_length=100, blank=True)
-	transactions = models.ManyToManyField(pendingTransactions, blank=True)
+	transactions = models.ManyToManyField(Transaction, blank=True)
 	nounce = models.IntegerField()
 	difficulty = models.IntegerField()
 
 	def __str__(self):
-		return (self._hash + " and " + self.previousHash )
+		return str(self._hash)
 

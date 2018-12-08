@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Create Transaction</title>
+	<title>Create Transaction-PayAll</title>
 </head>
 <body>
 <form action="/block/Transact/" method="POST">
 	{% csrf_token %}
-	<input type="text" name="fromAdd">
-	<input type="text" name="toAdd">
+	<input type="text" name="fromAdd" value="add5">
+	<input type="text" name="toAdd" value="add8">
 	<input type="number" name="amount">
 	<input type="submit" name="submit">
 </form>
